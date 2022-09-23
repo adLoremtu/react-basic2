@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import { No1, No2, No3, No4 } from "./components/answer";
+import { No1, No2, No3, No4, No5 } from "./components/answer";
 
 const App = () => {
   return (
@@ -11,6 +11,7 @@ const App = () => {
         <No2 />
         <No3 />
         <No4 />
+        <No5 />
       </div>
     </main>
   );
