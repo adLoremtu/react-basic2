@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import { No1, No2 } from "./components/answer";
+import { No1, No2, No3, No4 } from "./components/answer";
 
 const App = () => {
   return (
@@ -9,6 +9,8 @@ const App = () => {
       <div className="pl20">
         <No1 />
         <No2 />
+        <No3 />
+        <No4 />
       </div>
     </main>
   );
