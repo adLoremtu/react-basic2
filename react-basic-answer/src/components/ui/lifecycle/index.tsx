@@ -46,15 +46,17 @@ const LifeCycle = () => {
     };
   }, []);
 
-  // mounting + updating
+  // mounting + updating(all)
   useEffect(() => {
     console.log("変数配列指定なし");
   });
 
+  // mounting + updating(hogeのみ)
   useEffect(() => {
     console.log("isHogeを監視対象とした時");
   }, [isHoge]);
 
+  // mounting + updating(hoge, fugaのいずれか)
   useEffect(() => {
     console.log("isHoge, isFugaを監視対象とした時");
   }, [isHoge, isFuga]);

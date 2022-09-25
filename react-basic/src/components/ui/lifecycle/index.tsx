@@ -19,13 +19,6 @@ const LifeCycle = () => {
     setIsPiyo((prev) => !prev);
   };
 
-  // === [TODO]: useEffectのimportが実施したら下記コメントアウト部分を戻してみてください。 ===
-  // Unmounting以外で処理が動くので、どこからどこまでがConsole出力されたかわかりやすくなります。
-  // useEffect(() => {
-  //   console.log("=============== lifecycle start =================");
-  // });
-  // === [TODO]: end ===
-
   // === 問題5の解答エリア  start ===
   // mounting
 
@@ -33,14 +26,12 @@ const LifeCycle = () => {
 
   // unmounting
 
-  // mounting + updating
-  // === 問題5の解答エリア  end ===
+  // mounting + updating(all)
 
-  // === [TODO]: useEffectのimportが実施したら下記コメントアウト部分を戻してみてください。 ===
-  // useEffect(() => {
-  //   console.log("=============== lifecycle end =================");
-  // });
-  // === [TODO]: end ===
+  // mounting + updating(hogeのみ)
+
+  // mounting + updating(hoge, fugaのいずれか)
+  // === 問題5の解答エリア  end ===
 
   return (
     <>
