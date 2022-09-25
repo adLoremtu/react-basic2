@@ -1,15 +1,15 @@
 import React from "react";
 
-type Props = {
-  count: number;
-  onClick: () => void;
-};
-
 const CountUpProps = () => {
+  let count = 0;
+  const addCount = () => {
+    count++;
+  };
+
   return (
     <>
-      <p>ここにカウント数を表示してください。</p>
-      <button>+1</button>
+      <p>{count}</p>
+      <button onClick={addCount}>+1</button>
     </>
   );
 };
