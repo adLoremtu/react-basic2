@@ -38,7 +38,7 @@ Props から Context に変更してみましょう
   - このままだと TypeScript でエラーが発生するため、初期値の空 Object がこのような型になる想定ですよというのを明示する必要があります
   - `type`を使用して、Context に追加する予定のパラメータの型を明記してみましょう
     - 過去問題を参照に作ってみましょう
-  - 型定義が完了した後は`createContext({} as OO)`と書いて適用させれば OK です
+  - 型定義が完了した後は`createContext({} as type宣言)`と書いて適用させれば OK です
 - Context を子コンポーネントにて参照する
   - 子コンポーネントで参照できるようにするため、`return`内で呼び出している子コンポーネントを`<createContext宣言変数.Provider>`で囲む必要があります。
   - 囲んだ後は`Props`のように value として渡したい値を`value={渡したい値}`と書く必要があります。
@@ -73,8 +73,8 @@ Props から Context に変更してみましょう
   - 書き方としては`import { Context宣言変数 } from "../../answer/No6"`を入れる必要があります
 - Context を参照する
   - `useContext(対象のContext)`で生成した Context の参照が可能になります。
-  - 書き方としては`{ state, state更新関数 } = useContext(対象のContext)`で参照することができます。
-  - ちなみに`{ state, state更新関数 }`という書き方をしていますが、こちらは ES6 の分割代入を使用しています
+  - 書き方としては`{ state, state更新関数(updateLogin) } = useContext(対象のContext)`で参照することができます。
+  - ちなみに`{ state, state更新関数(updateLogin) }`という書き方をしていますが、こちらは ES6 の分割代入を使用しています
 - 参照した Context を表示させる
   - 表示させるには`{表示させたい値}`と書きます
 - ボタンをクリックしたときに更新処理が実行されるよう設定する
